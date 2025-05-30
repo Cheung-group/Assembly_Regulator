@@ -1,0 +1,151 @@
+# global model settings
+units		lj
+atom_style	atomic
+#pair_style	lj/cut 1.0
+pair_style      lennard/mdf 2.5 3.0
+pair_modify     tail no # turn off to avoid triggering full_energy
+
+# variables modifiable using -var command line switch
+#variable	eint1 index xxEINT1xx
+variable	temp index 1.0 #xxTEMPxx
+variable	eHS index 1.0
+variable  	E_rep index 1.0
+
+#mu variable
+include mu_coeff_temp.txt
+
+# Box setup
+variable	lbox index 20.0
+#boundary        p p p  # periodic  ** may not be needed if not using MD ** 
+region		box block 0 ${lbox} 0 ${lbox} 0 ${lbox}
+create_box	15 box  # number of particle types
+
+create_atoms    1 random 59 SEED1 NULL
+create_atoms    2 random 66 SEED2 NULL
+create_atoms    3 random 254 SEED3 NULL
+create_atoms    4 random 313 SEED4 NULL
+create_atoms    5 random 107 SEED5 NULL
+create_atoms    6 random 17 SEED6 NULL
+create_atoms    7 random 123 SEED7 NULL
+create_atoms    8 random 40 SEED8 NULL
+create_atoms    9 random 57 SEED9 NULL
+create_atoms    10 random 111 SEED10 NULL
+create_atoms    11 random 31 SEED11 NULL
+create_atoms    12 random 88 SEED12 NULL
+create_atoms    13 random 133 SEED13 NULL
+create_atoms    14 random 50 SEED14 NULL
+create_atoms    15 random 76 SEED15 NULL
+
+# Define groups
+group           A type 1
+group		B type 2
+group		C type 3
+group		D type 4
+group           E type 5
+group           F type 6
+group           G type 7
+group           H type 8
+group           I type 9
+group           J type 10
+group           K type 11
+group           L type 12
+group           M type 13
+group           N type 14
+group           O type 15
+
+# Atomic interaction
+mass            * 1.0
+include 	pair_coeff_commands.txt
+#read_dump       lammps_traj/xlms_21_xxTemPxx_1.lammpstrj xxtEMpxx x y z
+#fix 16 all temp/rescale 100 1.0 1.1 0.02 0.5
+# GCMC fixes
+variable        Ngcmc equal 400
+variable        Nmc equal 0
+fix             1 A gcmc 10 ${Ngcmc} ${Nmc} 1 SEED1 ${temp} ${mu1} 0.25
+fix             2 B gcmc 10 0 300 2 SEED2 ${temp} ${mu2} 0.25
+fix		3 C gcmc 10 0 300 3 SEED3 ${temp} ${mu3} 0.25
+fix		4 D gcmc 10 0 300 4 SEED4 ${temp} ${mu4} 0.25
+fix		5 E gcmc 10 0 300 5 SEED5 ${temp} ${mu5} 0.25
+fix		6 F gcmc 10 0 300 6 SEED6 ${temp} ${mu6} 0.25
+fix		7 G gcmc 10 0 300 7 SEED7 ${temp} ${mu7} 0.25
+fix		8 H gcmc 10 0 300 8 SEED8 ${temp} ${mu8} 0.25
+fix		9 I gcmc 10 0 300 9 SEED9 ${temp} ${mu9} 0.25
+fix		10 J gcmc 10 0 300 10 SEED10 ${temp} ${mu10} 0.25
+fix		11 K gcmc 10 0 300 11 SEED11 ${temp} ${mu11} 0.25
+fix		12 L gcmc 10 0 300 12 SEED12 ${temp} ${mu12} 0.25
+fix		13 M gcmc 10 0 300 13 SEED13 ${temp} ${mu13} 0.25
+fix		14 N gcmc 10 0 300 14 SEED14 ${temp} ${mu14} 0.25
+fix		15 O gcmc 10 0 300 15 SEED15 ${temp} ${mu15} 0.25
+
+
+# atom count
+variable        n1 equal count(A)
+variable	n2 equal count(B)
+variable	n3 equal count(C)
+variable	n4 equal count(D)
+variable        n5 equal count(E)
+variable        n6 equal count(F)
+variable        n7 equal count(G)
+variable        n8 equal count(H)
+variable        n9 equal count(I)
+variable        n10 equal count(J)
+variable        n11 equal count(K)
+variable        n12 equal count(L)
+variable        n13 equal count(M)
+variable        n14 equal count(N)
+variable        n15 equal count(O)
+
+# Averaging
+#variable	cnst equal (4/3)*PI*(0.5^3)/vol
+fix		ave all ave/time 1 1 500 v_n1 v_n2 v_n3 v_n4 v_n5 v_n6 v_n7 v_n8 v_n9 v_n10 v_n11 v_n12 v_n13 v_n14 v_n15 ave one start 500000 file Snumber.dat
+#fix		ave all ave/time 1 1 50 v_n1 v_n2 ave one start 200 file xlms_ave.dat
+variable	n1av equal f_ave[1]
+variable	n2av equal f_ave[2]
+variable	n3av equal f_ave[3]
+variable	n4av equal f_ave[4]
+variable	n5av equal f_ave[5]
+variable	n6av equal f_ave[6]
+variable	n7av equal f_ave[7]
+variable	n8av equal f_ave[8]
+variable	n9av equal f_ave[9]
+variable	n10av equal f_ave[10]
+variable	n11av equal f_ave[11]
+variable	n12av equal f_ave[12]
+variable	n13av equal f_ave[13]
+variable	n14av equal f_ave[14]
+variable	n15av equal f_ave[15]
+
+#variable	invol equal 1/vol
+#variable        rho1 equal count(A)*${invol}
+#variable	nugget equal 1.0e-8
+#variable	lambda equal 1.0
+#variable	muex1 equal ${mu1}-${temp}*ln(count(A)*${invol}*${lambda}+${nugget})
+#fix		ave2 all ave/time 50 20 1000 v_rho1 v_muex1  ave one file rho_vs_muex.dat
+#variable        rho1av equal f_ave2[1]
+#variable	muex1av equal f_ave2[2]
+
+
+# Output
+#variable        tacc equal f_1[2]/(f_1[1]+${nugget})
+#variable        iacc equal f_1[4]/(f_1[3]+${nugget})
+#variable        dacc equal f_1[6]/(f_1[5]+${nugget})
+
+compute_modify  thermo_temp dynamic yes
+thermo_style    custom step temp press pe ke density atoms v_n1av v_n2av v_n3av v_n4av v_n5av v_n6av v_n7av v_n8av v_n9av v_n10av v_n11av v_n12av v_n13av v_n14av v_n15av
+thermo		1000
+
+variable Step equal step
+#variable Temp equal temp
+variable PE equal pe
+
+fix energy all print 1000 "${Step} ${temp} ${PE}" file energy.txt screen no
+#thermo		200
+#read_dump	lammps_traj/xlms_21_1.0_1.lammpstrj 100000 x y z
+dump            1 all custom 500  xlms.lammpstrj id type x y z
+dump_modify     1 sort id
+#dump m1 all movie 25 xlms_toy.m4v type type adiam ${r} size 1280 720
+#dump i1 all image 200 xlms_toy_*.png type type adiam ${r} size 1024 1024
+
+#run		300000
+run		2000000 post no
+

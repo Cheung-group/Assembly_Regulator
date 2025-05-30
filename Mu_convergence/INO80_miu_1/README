@@ -1,0 +1,15 @@
+Written by Jiayi Wang 2025.5
+This is a directory to inversely determine the chemical potential of each individual subunit while keeping all other subunits' particle number fixed.
+
+run_muCalc.sh: bash file to execute the program and collect results.
+run_muCalc.slurm: slurm submission file. 
+
+Int.txt: A text file containing the already determined interaction energies.
+coeff_Int.sh: convert Int.txt into lammps input file format to be included into the lammps input file.
+newMu.txt: input chemical potential, typically start from 0. 
+coeff_mu.sh: convert newMu.txt into lammps input file format to be included into the lammps input file.
+
+in.xlms_toy.bak: lammps input file.
+newMu.m: matlab file to read output (particle number) of the current trajectory and update new chemical potential. 
+
+Snumber, lammps_traj, lammps_log, iterations are folders to collect simulation results.

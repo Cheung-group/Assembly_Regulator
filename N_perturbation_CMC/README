@@ -1,0 +1,6 @@
+Written by Jiayi Wang 2025.5
+This directory contains
+1. python codes to calcualte average accessible volumes over a range of time frames from trajectory files.
+2. python codes to calculate average potential energy over a range of time frames from lammps energy output files.
+
+After collecting raw data, the process data files calculate the change in accessible volume and potential energy compared to the reference trajectory vs particle number perturbation.  

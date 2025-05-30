@@ -1,0 +1,5 @@
+Here is an example of doing individual convergence for subunit 1. 
+For other subunits (e.g. 2-25), update the subunit type in newMu.m and in.xlms_toy.bak correspondingly. 
+
+for newMu.m - module = subunit type
+for in.xlms_toy.bak - the investigated subunit type is free to connect to the reservoir in the fix command. 

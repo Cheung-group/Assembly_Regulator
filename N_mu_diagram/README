@@ -1,0 +1,4 @@
+Written by Jiayi Wang on 2025.5
+This is a directory to run particle number vs chemical potential diagram for all subunits. Only eample for subunit 1 is included here. To run for other subunits, modify:
+run.sh - so it is updating the correct line in the chemical potential input file mu_coeff.txt.
+in.xlms_toy.bak - so only the investigated subunit is free to exchange particles with reservoir in the fix commands.

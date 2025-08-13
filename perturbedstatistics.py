@@ -35,8 +35,8 @@ def newanalysis(sub_type, frame_number, cut_number, abd):
     abdind = abd - 1
     abundance = abd_matrix[ind][abdind]
     global_tally = np.zeros([1, 15])
-    pipes = (r'/home/jfhase/Graphs/01_default/traj' + str(sub_type) + r'/xlms_cmc_' + str(abundance) + r'.lammpstrj')
-    edges = (r'/home/jfhase/Graphs/graphs/subunit_' + str(sub_type) + r'/abundance_' + str(abd) + r'.txt')
+    pipes = (r'/home/[PATH_TO_FILE]/traj' + str(sub_type) + r'/xlms_cmc_' + str(abundance) + r'.lammpstrj')
+    edges = (r'/home/[PATH_TO_FILE]/subunit_' + str(sub_type) + r'/abundance_' + str(abd) + r'.txt')
     header_line = "TIMESTEP"
     pipeline = import_file(pipes, multiple_frames=True)
     with open(edges) as file:
@@ -81,13 +81,13 @@ def newanalysis(sub_type, frame_number, cut_number, abd):
     semifinalcoeff = np.dot(coefflist[1], d[0])
     finalcoeff = semifinalcoeff/201
     diffcoeff = finalcoeff - basecoeff
-    with open (r'/home/jfhase/Graphs/data/mean2/subunit_' + str(sub_type) + r'.txt', 'a') as file:
+    with open (r'/home/[PATH_TO_FILE]/subunit_' + str(sub_type) + r'.txt', 'a') as file:
         file.write("Difference in mean coordination number between baseline simulation and simulation with subunit " + str(sub_type))
         file.write(" abundance of " + (str(abd_matrix[ind][abdind])))
         file.write('\n')
         file.write(str(diffmean))
         file.write('\n')    
-    with open (r'/home/jfhase/Graphs/data/variation3/subunit_' + str(sub_type) + r'.txt', 'a') as file:
+    with open (r'/home/[PATH_TO_FILE]/subunit_' + str(sub_type) + r'.txt', 'a') as file:
         file.write("Difference coefficient of variation in the coordination number between baseline simulation and simulation with subunit " + str(sub_type))
         file.write(" abundance of " + (str(abd_matrix[ind][abdind])))
         file.write('\n')

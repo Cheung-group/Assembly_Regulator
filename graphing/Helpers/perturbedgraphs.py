@@ -29,7 +29,7 @@ def perturbedgraphing (sub_type, frame_number, cut_number, abd):
     abdind = abd - 1
     abundance = abd_matrix[ind][abdind]
     discut = 1.05
-    input_file = (r'/home/jfhase/Graphs/01_default/traj' + str(sub_type) + r'/xlms_cmc_' + str(abundance) + r'.lammpstrj')
+    input_file = (r'/home/[PATH_TO_FILE]/traj' + str(sub_type) + r'/xlms_cmc_' + str(abundance) + r'.lammpstrj')
     pipeline = import_file(input_file, multiple_frames = True)
     for frame in range(2000, frame_number, cut_number):
         data = pipeline.compute(frame)
@@ -51,8 +51,8 @@ def perturbedgraphing (sub_type, frame_number, cut_number, abd):
                         data.particles['Particle Identifier'][n],
                         data.particles['Particle Identifier'][j],
                         weight = (discut - distances[n, j]))
-        with open(r'/home/jfhase/Graphs/graphs/subunit_' + str(sub_type) + r'/abundance_' + str(abd) + '.txt', 'a') as file:
+        with open(r'/home/[PATH_TO_FILE]/subunit_' + str(sub_type) + r'/abundance_' + str(abd) + '.txt', 'a') as file:
             file.write("TIMESTEP: " + str(frame))
             file.write('\n')
-        with open(r'/home/jfhase/Graphs/graphs/subunit_' + str(sub_type) + r'/abundance_' + str(abd) + '.txt', 'ab') as file:
+        with open(r'/home/[PATH_TO_FILE]/subunit_' + str(sub_type) + r'/abundance_' + str(abd) + '.txt', 'ab') as file:
             nx.write_edgelist(G, file, data=True)

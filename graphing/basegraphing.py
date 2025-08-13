@@ -10,7 +10,7 @@ import networkx as nx
 from scipy.spatial.distance import pdist, squareform
 def basegraphing(frame_number, cut_number):
     discut = 1.05
-    input_file = (r'/home/jfhase/Graphs/01_default/INO80_phi0.1_CMC.lammpstrj')
+    input_file = (r'/home/[PATH_TO_FILE]/INO80_phi0.1_CMC.lammpstrj')
     pipeline = import_file(input_file, multiple_frames = True)
     for frame in range(2000, frame_number, cut_number):
         data = pipeline.compute(frame)
@@ -32,10 +32,10 @@ def basegraphing(frame_number, cut_number):
                         data.particles['Particle Identifier'][n],
                         data.particles['Particle Identifier'][j],
                         weight = (discut - distances[n, j]))
-        with open(r'/home/jfhase/Graphs/graphs/empirical_abundance.txt', 'a') as file:
+        with open(r'/home/[PATH_TO_FILE]/empirical_abundance.txt', 'a') as file:
             file.write("TIMESTEP: " + str(frame))
             file.write('\n')
-        with open(r'/home/jfhase/Graphs/graphs/empirical_abundance.txt', 'ab') as file:
+        with open(r'/home/[PATH_TO_FILE]/empirical_abundance.txt', 'ab') as file:
             nx.write_edgelist(G, file, data=True)
 #uncomment this to run the script
 #basegraphing(4010, 10)

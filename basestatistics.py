@@ -12,8 +12,8 @@ from scipy.spatial.distance import pdist, squareform
 import statistics
 def basequantities(frame_number, cut_number):
     coefflist = np.zeros([2, 201])
-    pipes = (r'/home/jfhase/Graphs/01_default/INO80_phi0.1_CMC.lammpstrj')
-    edges = (r'/home/jfhase/Graphs/graphs/empirical_abundance.txt')
+    pipes = (r'/home/[PATH_TO_FILE]/INO80_phi0.1_CMC.lammpstrj')
+    edges = (r'/home/[PATH_TO_FILE]/empirical_abundance.txt')
     header_line = "TIMESTEP"
     pipeline = import_file(pipes, multiple_frames=True)
     with open(edges) as file:

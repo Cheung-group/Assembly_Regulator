@@ -48,6 +48,6 @@ Update `TRAJ_DIR` before running on a new filesystem.
 
 ## Notes
 
-- The reference values used by `process_data.py` are `Vacc_ref = 3515.1` and
+- The change in accessible volume is relative to that of a reference trajectory without particle number perturbation. The average and standard deviation of the reference accessible volumn used by `process_data.py` are `Vacc_ref = 3515.1` and
   `V_std_ref = 19.5`; update these if a different reference trajectory is used.
 - The empirical particle counts are hard-coded in `N_exp_dict`.

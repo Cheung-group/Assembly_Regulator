@@ -12,12 +12,12 @@ MATLAB reads the sampled particle numbers, compares the mean count with the
 empirical target, and writes an updated chemical potential for the next
 iteration.
 
-## Key Files
+## Input Files
 
 - `Int.txt`: fixed interaction energies from the interaction-convergence step.
 - `coeff_Int.sh`: converts `Int.txt` into LAMMPS `pair_coeff` commands.
 - `newMu.txt`: current chemical-potential vector.
-- `coeff_mu.sh`: converts `newMu.txt` into `mu_coeff.txt` and `mu.txt`.
+- `coeff_mu.sh`: converts `newMu.txt` into Lammps chemical potential commands `mu_coeff.txt` and a documentation of the current chemical potential `mu.txt`.
 - `newMu.m`: MATLAB update script for the selected subunit.
 - `in.xlms_toy.bak`: LAMMPS input template.
 - `run_muCalc.sh`: main iterative driver script.
@@ -25,8 +25,9 @@ iteration.
 
 ## Generated Outputs
 
-- `mu.txt` and `mu_coeff.txt`: chemical potentials used in the current
+- `mu.txt`: chemical potentials used in the current
   iteration.
+- `mu_coeff.txt`: Lammps input commands with the desired chemical potential value. 
 - `N.txt`: mean particle numbers from the current iteration.
 - `error.txt`: relative error for the investigated subunit.
 - `iterations/`: archived chemical potentials, particle numbers, and errors.

@@ -17,11 +17,10 @@ to their empirical abundance in a grand-canonical setting.
 Only the subunit-1 example is included here. To run scans for other subunits,
 copy or adapt the example and update:
 
-- `run.sh`: change which line of `mu_coeff.txt` is overwritten by each sampled
+- `run.sh`: define the sampled subunit in the Lammps command `mu_coeff.txt` by modifying the line that is overwritten by sampled
   chemical potential.
 - `in.xlms_toy.bak`: allow particle exchange only for the investigated subunit
   in the LAMMPS `fix` commands.
-- The sampled chemical-potential values and trajectory counts in `run.sh`.
 
 ## Outputs
 

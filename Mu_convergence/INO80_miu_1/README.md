@@ -6,8 +6,7 @@ fixed. In this copy, the investigated subunit is type 1.
 
 ## Purpose
 
-The workflow runs repeated grand-canonical Monte Carlo simulations in which only
-the selected subunit exchanges particles with a reservoir. After each simulation,
+The workflow runs repeated grand-canonical Monte Carlo simulations in which only the selected subunit exchanges particles with a reservoir. After each simulation,
 MATLAB reads the sampled particle numbers, compares the mean count with the
 empirical target, and writes an updated chemical potential for the next
 iteration.
@@ -57,8 +56,6 @@ stops early when the relative error is below the tolerance set in
 ## Adapting to Another Subunit
 
 1. Change `module = [1]` in `newMu.m` to the desired subunit type.
-2. Update `in.xlms_toy.bak` so that only the same subunit type exchanges with
+2. Update `in.xlms_toy.bak` so that only the desired subunit type exchanges with
    the reservoir.
-3. Replace or reset `newMu.txt` as needed.
-4. Confirm that `Int.txt` contains the interaction-energy set intended for the
-   study condition.
+3. Replace or reset `newMu.txt` as needed to an appropriate initial value.

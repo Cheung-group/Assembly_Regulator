@@ -32,10 +32,12 @@ The final reported values are averages over sampled frames.
 ## Workflow
 
 1. Generate baseline and perturbed edgelists using `graphing/`.
-2. Run `basestatistics.py` to compute `basemean` and `basecoeff`. `basemean` is the frame-averaged mean coordination number for the baseline simulation where all INO80 subunits are at empirical abundance; `basecoeff` is the frame-averaged coefficient of variation of coordination number for that same baseline simulation.
-4. Enter those baseline values in `perturbedstatistics.py` if they differ from
+2. Run `basestatistics.py` to compute `basemean` and `basecoeff`.
+
+`basemean` is the frame-averaged mean coordination number for the baseline simulation where all INO80 subunits are at empirical abundance; `basecoeff` is the frame-averaged coefficient of variation of coordination number for that same baseline simulation.
+5. Enter those baseline values in `perturbedstatistics.py` if they differ from
    the values already included.
-5. Run `perturbedstatistics.py` for the desired subunits and abundance
+6. Run `perturbedstatistics.py` for the desired subunits and abundance
    perturbations.
 
 ## Outputs

@@ -40,6 +40,6 @@ Update `data_dir` before running elsewhere.
 
 ## Notes
 
-- The reference values used by `process_PE.py` are `E_ref = -1.460` and
+- The change in potential energy is relative to the reference trajectory without particle number perturbation. The average and standard deviation of the potential energy for the reference trajectory are set in `process_PE.py` as `E_ref = -1.460` and
   `E_ref_std = 0.044`; update these if a different reference trajectory is used.
 - The empirical particle counts are hard-coded in `N_exp_dict`.

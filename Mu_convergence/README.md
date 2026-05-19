@@ -25,8 +25,6 @@ directory and update the investigated subunit type in:
 ## Inputs From Upstream Steps
 
 - Inferred pair interaction energies from `Int_convergence/`.
-- Empirical abundance fractions encoded in `newMu.m`.
-- LAMMPS input template with the correct particle-exchange settings.
 
 ## Notes
 

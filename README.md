@@ -1,24 +1,18 @@
 # INO80 Assembly Modeling Code
 
 Author: Jiayi Wang  
-Last updated: May 2025
+Last updated: May 2026
 
 This repository contains the core analysis and simulation code used for the study
 **"Physical principles of building protein megacomplexes in a crowded milieu"**.
-The project models assembly of the yeast INO80 chromatin-remodeling complex in
-crowded, cell-like environments using coarse-grained statistical mechanics,
-experimental abundance data, and cross-linking mass spectrometry constraints.
-
-The two Word documents in this directory are the study manuscript and supporting
-information:
-
-- `Regulation_PRR.docx`: main text.
-- `Regulation_SI_PRR.docx`: supplementary methods, figures, and tables.
+The project models the assembly of the yeast INO80 chromatin-remodeling complex in a
+crowded, cell-like environments using coarse-grained statistical mechanics and
+experimental data, such as protein abundance and cross-linking mass spectrometry.
 
 ## Study Overview
 
-The workflow represents each INO80 subunit as a coarse-grained bead and uses
-Monte Carlo simulations to infer and analyze the physical parameters that govern
+The workflow represents each protein in the INO80 complex as a coarse-grained bead and uses
+Grand Canonical Monte Carlo (GCMC) simulations to infer the parameters and physical principles that govern
 assembly:
 
 1. Infer subunit-subunit interaction energies from cross-linking contact

@@ -57,9 +57,8 @@ paths before running the code in a new location.
    potentials for each subunit.
 3. Use `N_mu_diagram/` to examine particle-number response over chemical
    potential scans.
-4. Use canonical perturbation trajectories with `N_perturbation_CMC/` to quantify thermodynamic effects of subunit particle number perturbation. 
-5. Use canonical perturbation trajectories with `graphing/`, and `graph_statistics/` to quantify the network
-   effects of subunit abundance perturbation.
+4. Use canonical perturbation trajectories with `N_perturbation_CMC/` to quantify the systemic thermodynamic effects of subunit particle number perturbation. 
+5. Use canonical perturbation trajectories with `graphing/`, and `graph_statistics/` to quantify the change in protein-protein interaction network induced by subunit abundance perturbation.
 
 Each subdirectory contains a README with more specific inputs, outputs, and
 execution notes.

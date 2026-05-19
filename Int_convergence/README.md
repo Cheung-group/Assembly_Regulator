@@ -11,19 +11,19 @@ that simulated contact intensities reproduce empirical contact intensities
 inferred from cross-linking mass spectrometry. The resulting interaction
 energies are used by the downstream chemical-potential and assembly simulations.
 
-## Key Files
+## Input Files
 
-- `contact_exp.txt`: empirical contact intensities used as the target values.
-- `newInt.txt`: current interaction-energy vector. This is usually initialized
+- `contact_exp.txt`: empirical protein-protein contact intensities used as the target values.
+- `newInt.txt`: updated interaction energies from the previous iteration. This is usually initialized
   to zeros and updated after each iteration.
 - `coeff.sh`: converts `newInt.txt` into `Int.txt` and
-  `pair_coeff_commands.txt` in LAMMPS input format.
+  `pair_coeff_commands.txt` to be included in the LAMMPS input file.
 - `in.xlms_toy.bak`: LAMMPS input template. Random seed placeholders are
   replaced at each iteration to produce `in.xlms_toy`.
-- `run_muCalc_Int.sh`: main iterative driver script.
+- `run_muCalc_Int.sh`: main script to drive the iteration process.
 - `run_muCalc.slurm`: SLURM submission script for the workflow.
 - `create_input_for_ContactN.sh`: prepares per-subunit trajectory files for
-  MATLAB contact analysis.
+  MATLAB inter-protein contact intensities analysis.
 - `ContactN.m`: computes simulated contact intensities from the trajectory.
 - `new_Int.m`: updates interaction energies using the covariance-based inverse
   statistical update.

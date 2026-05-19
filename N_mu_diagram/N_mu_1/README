@@ -1,8 +1,0 @@
-Written by Jiayi Wang 2025.5
-This is a directory to run particle number vs chemical potential for a specific subunit. Modify the for loop in run.sh to sample different chemical potentials. 
-
-mu_coeff.txt and pair_coeff_commands.txt are chemical potential and interaction energies input file, already written in lammps input format to be included in the lammps input file. 
-
-in.xlms_toy.bak: lammps input file
-
-traj, Snumber and lammps_log are directories to collect results. 

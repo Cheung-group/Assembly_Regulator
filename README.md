@@ -1,4 +1,4 @@
-# INO80 Assembly Modeling Code
+# Assembly Regulator
 
 Author: Jiayi Wang  
 Last updated: May 2026

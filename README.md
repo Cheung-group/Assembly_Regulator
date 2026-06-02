@@ -67,5 +67,9 @@ paths before running the code in a new location.
 4. Use canonical perturbation trajectories with `N_perturbation_CMC/` to quantify the systemic thermodynamic effects of subunit particle number perturbation. 
 5. Use canonical perturbation trajectories with `graphing/`, and `graph_statistics/` to quantify the change in protein-protein interaction network induced by subunit abundance perturbation.
 
+## Citation
+
+
+
 Each subdirectory contains a README with more specific inputs, outputs, and
 execution notes.

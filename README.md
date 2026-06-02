@@ -69,7 +69,10 @@ paths before running the code in a new location.
 
 ## Citation
 
+Physical principles of building protein megacomplexes in a crowded milieu
+Jiayi Wang, Jules Nde, Andrei G. Gasic, Jacob Haseley, Margaret S. Cheung
 
+https://doi.org/10.48550/arXiv.2602.14005
 
 Each subdirectory contains a README with more specific inputs, outputs, and
 execution notes.

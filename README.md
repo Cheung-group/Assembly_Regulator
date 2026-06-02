@@ -57,7 +57,7 @@ Several scripts contain absolute paths from the original compute environment
 such as `/gscratch/...`, `/mmfs1/...`, or `/home/[PATH_TO_FILE]/`. Update these
 paths before running the code in a new location.
 
-## Suggested Workflow
+## Workflow
 
 1. Run `Int_convergence/` to infer pair interaction energies.
 2. Use the inferred interactions in `Mu_convergence/` to determine chemical

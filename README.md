@@ -12,7 +12,7 @@ The use case is the assembly of the yeast INO80 chromatin-remodeling complex.
 
 ## Study Overview
 
-The workflow represents each protein in the INO80 complex as a coarse-grained bead and uses
+The workflow represents each protein subunit in the INO80 complex as a coarse-grained bead and uses
 Grand Canonical Monte Carlo (GCMC) simulations to infer the parameters and physical principles that govern
 assembly:
 

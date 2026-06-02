@@ -12,7 +12,7 @@ crowded, cell-like environment using coarse-grained statistical mechanics and
 experimental data, such as protein abundance and cross-linking mass spectrometry.
 The use case is the assembly of the yeast INO80 chromatin-remodeling complex.
 
-## Study Overview
+## Key Features
 
 The workflow represents each protein subunit in the INO80 complex as a coarse-grained bead and uses
 Grand Canonical Monte Carlo (GCMC) simulations to infer the parameters and physical principles that govern

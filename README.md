@@ -3,6 +3,8 @@
 Author: Jiayi Wang  
 Last updated: May 2026
 
+## Description
+
 This repository contains the core analysis and simulation code used for the study
 **"Physical principles of building protein megacomplexes in a crowded milieu"**.
 The project models emergent assemblies of subunits from protein megacomplexes in a

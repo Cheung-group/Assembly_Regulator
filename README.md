@@ -5,7 +5,7 @@ Last updated: May 2026
 
 ## Description
 
-This repository contains the core analysis and simulation code used for the study
+This repository of "Assembly_Regulator" contains the core analysis and simulation code used for the study
 **"Physical principles of building protein megacomplexes in a crowded milieu"**.
 The project models emergent assemblies of subunits from protein megacomplexes in a
 crowded, cell-like environment using coarse-grained statistical mechanics and

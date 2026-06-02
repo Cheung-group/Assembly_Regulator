@@ -43,6 +43,8 @@ The use case is the assembly of the yeast INO80 chromatin-remodeling complex.
 - `graphing/`: conversion of LAMMPS trajectories into graph edgelists.
 - `graph_statistics/`: analysis of graph-derived coordination statistics.
 
+Each subdirectory contains a README with more specific inputs, outputs, and
+execution notes.
 ## Main Requirements
 
 The scripts are intended for an HPC environment and assume access to:
@@ -74,5 +76,6 @@ Jiayi Wang, Jules Nde, Andrei G. Gasic, Jacob Haseley, Margaret S. Cheung
 
 https://doi.org/10.48550/arXiv.2602.14005
 
-Each subdirectory contains a README with more specific inputs, outputs, and
-execution notes.
+## Ackowledgement
+
+JW, JN, and JH thank the support from the National Science Foundation MCB 2221824. This work is also partially supported by the NW-BRaVE for Biopreparedness project funded by the U. S. Department of Energy (DOE), Office of Science, Office of Biological and Environmental Research, under FWP 81832. A portion of this research was performed on a project award (Enhancing biopreparedness through a model system to understand the molecular mechanisms that lead to pathogenesis and disease transmission ) from the Environmental Molecular Sciences Laboratory, a DOE Office of Science User Facility sponsored by the Biological and Environmental Research program under Contract No. DE-AC05-76RL01830. Pacific Northwest National Laboratory is a multi-program national laboratory operated by Battelle for the DOE under Contract DE-AC05-76RL01830. 

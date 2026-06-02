@@ -10,7 +10,7 @@ This repository of "Assembly_Regulator" contains the core analysis and simulatio
 The project models emergent assemblies of subunits from protein megacomplexes in a
 crowded, cell-like environment using coarse-grained statistical mechanics and
 experimental data, such as protein abundance and cross-linking mass spectrometry.
-The use case is the assembly of the yeast INO80 chromatin-remodeling complex.
+
 
 ## Key Features
 
@@ -26,6 +26,10 @@ assembly:
 4. Map particle number versus chemical potential for selected subunits.
 5. Perturb particle numbers in canonical simulations to quantify changes in
    accessible volume, potential energy, and network structure.
+
+## Use case
+
+The use case is the assembly of the yeast INO80 chromatin-remodeling complex.
 
 ## Repository Structure
 

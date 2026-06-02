@@ -5,9 +5,10 @@ Last updated: May 2026
 
 This repository contains the core analysis and simulation code used for the study
 **"Physical principles of building protein megacomplexes in a crowded milieu"**.
-The project models the assembly of the yeast INO80 chromatin-remodeling complex in a
-crowded, cell-like environments using coarse-grained statistical mechanics and
+The project models emergent assemblies of subunits from protein megacomplexes in a
+crowded, cell-like environment using coarse-grained statistical mechanics and
 experimental data, such as protein abundance and cross-linking mass spectrometry.
+The use case is the assembly of the yeast INO80 chromatin-remodeling complex.
 
 ## Study Overview
 

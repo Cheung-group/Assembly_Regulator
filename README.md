@@ -70,11 +70,9 @@ paths before running the code in a new location.
 5. Use canonical perturbation trajectories with `graphing/`, and `graph_statistics/` to quantify the change in protein-protein interaction network induced by subunit abundance perturbation.
 
 ## Citation
+J. Wang, J. Nde, A. G. Gasic, J. Haseley, and M. S. Cheung, “Physical principles of building protein megacomplexes in a crowded milieu,” Phys. Rev. Research 8, 033320 (2026).
 
-Physical principles of building protein megacomplexes in a crowded milieu
-Jiayi Wang, Jules Nde, Andrei G. Gasic, Jacob Haseley, Margaret S. Cheung
-
-https://doi.org/10.48550/arXiv.2602.14005
+DOI: https://doi.org/10.1103/b8cy-vfy5
 
 ## Ackowledgement
 

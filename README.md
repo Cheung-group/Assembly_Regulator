@@ -1,7 +1,9 @@
 # Assembly Regulator
 
 Developer: Jiayi Wang 
+
 Contributor: Jacob Haseley
+
 Last updated: May 2026
 
 ## Description
